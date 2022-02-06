@@ -1,0 +1,45 @@
+td{
+    width: 25%;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+
+table{
+    width: 70%;
+    height: 70vh;
+    background-color: grey;
+    color:burlywood;
+}
+
+td:hover {
+
+    background-color: bisque;
+}
+body{
+    font-family:'Montserrat', 'Gill Sans';
+}
+
+#resultArea{
+    height: 30vh;
+    background-color: blanchedalmond;
+    color: rgb(78, 65, 65);
+    font-size: 32px;
+    display: flex;
+    justify-content: flex-end;
+    padding:12px;
+    box-sizing: border-box;
+    width: 70%;
+}
+
+#result{
+    background-color: gainsboro;
+}
+
+#result:hover{
+    background-color: coral;
+}
+.highlight{
+    background-color: ghostwhite;
+}

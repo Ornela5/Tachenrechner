@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"  href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tachenrechner</title>
+    <script> 
+    
+
+    function appendOperation(operation){
+        document.getElementById('resultArea').innerHTML += operation;
+    }
+
+    
+    function calculateResult(){
+       let container = document.getElementById('resultArea');
+       let result = eval(container.innerHTML);
+
+       container.innerHTML = result;
+    }
+    </script>
+</head>
+<body>
+    <h1>Tachenrechner</h1>
+
+    <!-- ich füge hier eine Tabelle ein und ich sage, wie meine Tabelle
+    aussehen soll. Mit <tr></tr> sage ich, wie viele Reihe ich haben will
+    und mit <td></td> sage ich, wie viele Spalte ich haben will. -->
+
+<div id ="resultArea">
+
+</div>
+
+    <table>
+        <tr>
+            <td onclick="appendOperation(7)">7</td>
+            <td onclick="appendOperation(8)">8</td>
+            <td onclick="appendOperation(9)">9</td>
+            <td onclick="appendOperation('/')" class="highlight">/</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(4)">4</td>
+            <td onclick="appendOperation(5)">5</td>
+            <td onclick="appendOperation(6)">6</td>
+            <td onclick="appendOperation('*')" class="highlight">x</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(1)">1</td>
+            <td onclick="appendOperation(2)">2</td>
+            <td onclick="appendOperation(3)">3</td>
+            <td onclick="appendOperation('+')" class="highlight">+</td>
+        </tr>
+
+        <tr>
+            <td onclick="appendOperation(0)">0</td>
+            <td onclick="appendOperation(',')">,</td>
+            <td onclick="calculateResult()" id = "result"> = </td>
+            <td onclick="appendOperation('-')" class="highlight">-</td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="rechner.js"></script>
+</body>
+</html>
